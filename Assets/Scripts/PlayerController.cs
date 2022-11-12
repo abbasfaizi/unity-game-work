@@ -19,5 +19,11 @@ public class PlayerController : MonoBehaviour
             input.x = Input.GetAxisRaw("Horizontal");
             input.x = Input.GetAxisRaw("Vertical");
         }
+
+        if (input != transform.position) {
+            var targetPos = transform.position;
+            targetPos.x += input.x;
+            targetPos.y += input.y;
+        }
     }
 }
